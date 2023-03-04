@@ -24,8 +24,11 @@ const Header = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
+          <div className="collapse navbar-collapse " id="navbarNav">
+            <ul
+              className="navbar-nav w-100"
+              style={{ display: "flex", justifyContent: "space-between" }}
+            >
               <li className="nav-item">
                 <Link
                   className="nav-link active fs-5"
@@ -36,19 +39,19 @@ const Header = () => {
                   Home
                 </Link>
               </li>
+              <div className="d-flex ">
+                <Link to="/login">
+                  <button type="button" class="btn btn-dark mx-2">
+                    Sign-In
+                  </button>
+                </Link>
+                <Link to="/sign-up">
+                  <button type="button" class="btn btn-dark">
+                    Sign-Up
+                  </button>
+                </Link>
+              </div>
             </ul>
-          </div>
-          <div className="d-flex ">
-            <Link to="/login">
-              <button type="button" class="btn btn-dark mx-2">
-                Sign-In
-              </button>
-            </Link>
-            <Link to="/sign-up">
-              <button type="button" class="btn btn-dark">
-                Sign-Up
-              </button>
-            </Link>
           </div>
         </div>
       </nav>

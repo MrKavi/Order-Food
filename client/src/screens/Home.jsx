@@ -1,6 +1,6 @@
 import React from "react";
 import { Cards } from "../components/Cards";
-import Carousol from "../components/Carousol";
+import CarouselHome from "../components/Carousel";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
@@ -10,9 +10,9 @@ const Home = () => {
       <Header />
       <div>
         <div>
-          <Carousol />
+          <CarouselHome />
         </div>
-        <div style={{ display: "flex" }}>
+        <div className="d-md-flex">
           <Cards />
           <Cards />
           <Cards />
