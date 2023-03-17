@@ -2,7 +2,7 @@ import { Carousel } from "react-bootstrap";
 import "../style/animatedCarousel.css";
 const CarouselHome = () => {
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative", objectFit: "contain !important" }}>
       <Carousel
         interval={3000}
         controls={false}
