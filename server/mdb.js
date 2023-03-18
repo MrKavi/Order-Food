@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const DB_URL = "mongodb+srv://url......";
+const DB_URL = "mongodb+srv:";
 
 const mongoDB = async () => {
   try {
