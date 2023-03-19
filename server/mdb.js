@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const DB_URL = "mongodb+srv:";
+const DB_URL =
+  "mongodb+srv://rohan:rohan123@cluster0.voqd8lz.mongodb.net/fooddelivery?retryWrites=true&w=majority";
 
 const mongoDB = async () => {
   try {
