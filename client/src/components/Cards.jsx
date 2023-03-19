@@ -1,16 +1,19 @@
 import React from "react";
 
-export const Cards = () => {
+export const Cards = (props) => {
+  let options = props.options;
+  let priceOption = Object.keys(options);
+
   return (
     <div className="card mt-3 mx-auto" style={{ width: "18rem" }}>
       <img
-        src="https://heartstrokeprod.azureedge.net/-/media/images/articles/food-guide-plate.ashx?rev=3e5a0dc07a0c4a96b4a84113d4eb1e47"
-        className="card-img-top"
+        src={props.foodImg}
+        style={{ width: "100%", height: "250px", objectFit: "cover" }}
         alt="..."
       />
       <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">Some quick example text ..</p>
+        <h5 className="card-title">{props.foodName}</h5>
+        <p className="card-text">Enjoy your {props.foodName} </p>
         <div
           className="container w-100"
           style={{
@@ -29,8 +32,13 @@ export const Cards = () => {
             })}
           </select>
           <select className="m-2 bg-success rounded" style={{ color: "white" }}>
-            <option value="Half">Half</option>
-            <option value="Full">Full</option>
+            {priceOption.map((data) => {
+              return (
+                <option key={data} value={data}>
+                  {data}
+                </option>
+              );
+            })}
           </select>
           <div>
             Total Price : <span>124$</span>
